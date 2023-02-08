@@ -4,7 +4,7 @@ library(ROSE)
 # read in data
 heart_disease <- read_csv("data-raw/heart_2020.csv", show_col_types = FALSE)
 
-# data wrangling, undersampling to make the dataset more balanced and less biased
+# undersampling to make the dataset more balanced and less biased
 count_hd <- 27373
 
 proportion_hd <- count_hd / .50
@@ -12,6 +12,22 @@ proportion_hd <- count_hd / .50
 undersampling <- ovun.sample(formula = HeartDisease ~ ., data = heart_disease, method="under", N = 54746, seed = 102)
 
 heart_disease <- undersampling$data
+
+# transform characters into factors
+heart_disease$HeartDisease <- as.factor(heart_disease$HeartDisease)
+heart_disease$Smoking <- as.factor(heart_disease$Smoking)
+heart_disease$AlcoholDrinking <- as.factor(heart_disease$AlcoholDrinking)
+heart_disease$Stroke <- as.factor(heart_disease$Stroke)
+heart_disease$DiffWalking <- as.factor(heart_disease$DiffWalking)
+heart_disease$Sex <- as.factor(heart_disease$Sex)
+heart_disease$AgeCategory <- as.factor(heart_disease$AgeCategory)
+heart_disease$Race <- as.factor(heart_disease$Race)
+heart_disease$Diabetic <- as.factor(heart_disease$Diabetic)
+heart_disease$PhysicalActivity <- as.factor(heart_disease$PhysicalActivity)
+heart_disease$GenHealth <- as.factor(heart_disease$GenHealth)
+heart_disease$Asthma <- as.factor(heart_disease$Asthma)
+heart_disease$KidneyDisease <- as.factor(heart_disease$KidneyDisease)
+heart_disease$SkinCancer <- as.factor(heart_disease$SkinCancer)
 
 # save data in data directory
 usethis::use_data(heart_disease, overwrite = TRUE)
