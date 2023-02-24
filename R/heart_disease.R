@@ -12,8 +12,8 @@
 #'    \item{Smoking}{ Have they smoked 100 cigarettes in their lifetime? (Yes/No)}
 #'    \item{AlcoholDrinking}{Are they a heavy drinker? Men: More than 14 drinks per week, Women: More than 7 (Yes/No)}
 #'    \item{Stroke}{Have they had a stroke in their lifetime? (Yes/No)}
-#'    \item{PhysicalHealth}{How many days in the last 30 was their physical health bad?}
-#'    \item{MentalHealth}{How many days in the last 30 was their mental health bad?}
+#'    \item{PhysicalHealth}{In the last 30 days, how would they classify their physical health? (Good, Fair, Bad)}
+#'    \item{MentalHealth}{In the last 30 days, how would they classify their mental health? (Good, Fair, Bad)}
 #'    \item{DiffWalking}{Is it difficult to walk or climb the stairs? (Yes/No)}
 #'    \item{Sex}{Male or Female}
 #'    \item{AgeCategory}{13 level age category ranging from 18 to 80 years or older}
